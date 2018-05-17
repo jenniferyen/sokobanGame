@@ -7,15 +7,11 @@ PennKey: Jennifer Yen
 =: Core Concepts :=
 ===================
 
-- List the four core concepts, the features they implement, and why each feature
-  is an appropriate use of the concept. Incorporate the feedback you got after
-  submitting your proposal.
-
   1. Appropriately modeling state using 2D arrays: My gameboard is a char[][] where the characters can be A, S, X, Y, B, or G. A will draw an avatar. S will draw a normal tile. X will draw a block (means that the block is on a goal tile). Y will draw the avatar on a goal tile (draws goal tile than avatar). B will draw a block. G will draw a goal tile. To move, my move functions switch the position of the characters in the char[][] and redraws the board. 
 
-  2. Appropriately modeling state using collections: I used an ArrayList<String, HighScores> to manage high scores. 
+  2. Appropriately modeling state using collections: I used an ArrayList<String, HighScores> to manage high scores. I also used a Map to map a String specifying the level to each Level object. 
 
-  3. File I/O: using I/O to parse a file: I read my levels from a text file (see resources/Simple.txt), then converted it to easier-to-use characters, and drew my game board. I also implemented a save game function that saves the current board in a gameData.txt file and a load game function that loads the saved game. The save game and load game functions do save (write out to gameData.txt) and load the information (read from gameData.txt) but I am having trouble repainting the saved game. I wrote print functions in my save() and load() for you to see this. 
+  3. File I/O: using I/O to parse a file: I read my levels from a text file (see resources/Simple.txt), then converted it to easier-to-use characters, and drew my game board. I also implemented a save game function that saves the current board in a gameData.txt file and a load game function that loads the saved game. The save game and load game functions do save (write out to gameData.txt) and load the information (read from gameData.txt) but I am having trouble repainting the saved game. I wrote print functions in my save() and load(). 
 
   4. Using Unit on a testable component: I made JUnit tests for the high scores component of my game and also tried to test the Model and GameBoard classes. However, for the latter two and especially GameBoard.java, I had more difficulty because many of the methods were interconnected with one another. This informs me that I could have better separated the functionality of these classes. Some methods I tested included getScore(), addScore(), sort(), and replaceTile(). 
 
