@@ -17,11 +17,8 @@ PennKey: Jennifer Yen
 
 
 =========================
-=: Your Implementation :=
+=: My Implementation :=
 =========================
-
-- Provide an overview of each of the classes in your code, and what their
-  function is in the overall game.
 
 GameBoard.java: This class contains most of the functionality and state of the game with various methods/features as follows
 1. instructions window that opens before you can play the game
@@ -58,23 +55,18 @@ ScoreManager.java: This class contains methods that manage everything related to
 UnitTests.java: Contains the JUnit tests for my game. 
 
 
-- Were there any significant stumbling blocks while you were implementing your
-  game (related to your design, or otherwise)?
-I struggled with reading the images into the game and drawing it for a very long time because I was unfamiliar with ImageIO. Converting the text file into something that could be drawn to display the game board was definitely a challenge.
-I also struggled with the save game/load game functionality. I think my save game does same my game board to a gameData.txt file but I cannot figure out how to reload it. 
+Significant Challenges: 
+I initially struggled with reading the images into the game and drawing it. Converting the text file into something that could be drawn to display the game board was definitely a challenge.
+I also struggled with the save game/load game functionality. Currently, my save game does same my game board to a gameData.txt file but there are some technicalities with reloading the board.  
 
 
-- Evaluate your design. Is there a good separation of functionality? How well is
-  private state encapsulated? What would you refactor, if given the chance?
-I think my GameBoard.java is a very large class and there are ways to better separate the functionality of that classes into smaller classes. Something I played with was creating separate Objects for the Avatar, Blocks, and Tiles that have their own paintComponent() / draw() methods but as I tried that, I realized that drawing all the graphics in one class was easier because I also read all the graphics in the same class. If I could refactor GameBoard.java, I would separate the character/block movements from other methods in that class. 
+Design Evaluation / Encapsulation
+My GameBoard.java is a very large class and there are ways to better separate the functionality of that classes into smaller classes. Something I played with was creating separate Objects for the Avatar, Blocks, and Tiles that have their own paintComponent() / draw() methods but as I tried that, I realized that drawing all the graphics in one class was easier because I also read all the graphics in the same class. However, if I could refactor GameBoard.java, I would separate the character/block movements from other methods in that class. 
 
 
 ========================
 =: External Resources :=
 ========================
-
-- Cite any external resources (libraries, images, tutorials, etc.) that you may
-  have used while implementing your game.
 
 I found my game art from https://opengameart.org/content/sokoban-100-tiles. 
 I found the text file to read my levels from http://www.sourcecode.se/sokoban/levels
