@@ -1,6 +1,6 @@
 ; Simple Collection
 ; Author: Phil Shapiro
-; 61 simple levels
+; 61 simple levels, 18 chosen for my reversion of the game @Jennifer Yen
 ; http://www.sourcecode.se/sokoban/levels
 
     #####
